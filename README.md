@@ -79,4 +79,3 @@ Express
 Sequelize
 
 PostgreSQL
-- **PostgreSQL** (or another database compatible with Sequelize)
