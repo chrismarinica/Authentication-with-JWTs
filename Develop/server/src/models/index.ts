@@ -8,6 +8,7 @@ import { TicketFactory } from './ticket.js';
 const sequelize = process.env.DB_URL
   ? new Sequelize(process.env.DB_URL, {
       dialect: 'postgres',
+      protocol: 'postgres',
       dialectOptions: {
         ssl: {
           require: true,
@@ -22,15 +23,13 @@ const sequelize = process.env.DB_URL
       {
         host: 'localhost',
         dialect: 'postgres',
-        dialectOptions: {
-          decimalNumbers: true,
-        },
       }
     );
 
 const User = UserFactory(sequelize);
 const Ticket = TicketFactory(sequelize);
 
+// associations
 User.hasMany(Ticket, { foreignKey: 'assignedUserId' });
 Ticket.belongsTo(User, { foreignKey: 'assignedUserId', as: 'assignedUser' });
 
