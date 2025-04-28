@@ -88,35 +88,35 @@ tbody tr:nth-child(odd) {
 /* Navbar Content */
 .nav {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 1em 2em;
 }
 
 .nav ul {
   display: flex;
-  margin-left: auto;
-  flex-direction: row;
+  gap: 1rem; /* nice space between buttons */
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-title {
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: 2rem;
   font-size: larger;
   font-weight: 900;
   font-family: 'Arial Black', sans-serif;
+  margin: 0;
 }
 
 .nav-title a {
   color: #4da6ff;
+  text-decoration: none;
 }
 
 .nav-item {
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin: 2rem;
-  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem; 
 }
 
 .nav-link {
@@ -145,22 +145,22 @@ tbody tr:nth-child(odd) {
   text-align: center;
   font-weight: 500;
   width: 33%;
-  height: 90vh; 
+  height: 190vh; 
   border: 1px solid rgba(0, 0, 0, 0.2);
   margin: 5px;
   padding: 5px;
 }
 
 .todo {
-  background-color: #e9cbec;
+  background-color: #f9ebd2;
 }
 
 .inprogress {
-  background-color: #b864c4;
+  background-color: #767676;
 }
 
 .done {
-  background-color: #732381;
+  background-color: #696058;
 }
 
 .ticket-card {
@@ -180,10 +180,11 @@ tbody tr:nth-child(odd) {
 }
 
 #create-ticket-link {
-  display: block;
-  margin-left: auto;
+  position: absolute;
+  top: 1.05rem;
+  right: 10rem; /* Adjust this to move left/right */
+  display: inline-block;
 }
-
 
 .form {
   width: 600px; /* or adjust to your preference */
