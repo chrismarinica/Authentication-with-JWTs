@@ -90,7 +90,7 @@ tbody tr:nth-child(odd) {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1em 2em;
+  padding: 1rem 2rem;
 }
 
 .nav ul {
@@ -102,7 +102,7 @@ tbody tr:nth-child(odd) {
 }
 
 .nav-title {
-  font-size: larger;
+  font-size: 1.5rem;
   font-weight: 900;
   font-family: 'Arial Black', sans-serif;
   margin: 0;
@@ -114,9 +114,8 @@ tbody tr:nth-child(odd) {
 }
 
 .nav-item {
-  display: flex;
-  align-items: center;
-  gap: 1rem; 
+  list-style: none;
+  margin-left: auto; /* makes sure it's pushed to the right */
 }
 
 .nav-link {
